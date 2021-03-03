@@ -38,7 +38,7 @@ findstr /snip /c:"Download failed and temporary file" "%PROGRAMFILES%\Microsoft\
 
 #there should be no events
 Write-verbose "Checking Unified Message event logs"
-Get-EventLog -LogName Application -Source "MSExchange Unified Messaging" -EntryType Error | Where-Object { $_.Message -like "*System.InvalidCastException*" }
+Get-EventLog -LogName Application -Source "MSExchange Unified Messaging" -EntryType Error | Where-Object { $_.Message -like "*System.InvalidCastException*" } -ea 0
 
 #this should be blank
 Write-verbose "Checking for Set-VirtualDirectory indicators"
