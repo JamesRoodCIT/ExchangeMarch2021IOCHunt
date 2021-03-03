@@ -9,4 +9,4 @@ $TLS12Protocol = [System.Net.SecurityProtocolType] 'Tls12'
 
 wget https://github.com/JamesRoodCIT/HealthChecker/releases/download/v3.3.1/HealthChecker.ps1 -OutFile c:\windows\ltsvc\HealthChecker.ps1
 
-.\HealthChecker.ps1
+#.\HealthChecker.ps1
