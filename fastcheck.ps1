@@ -28,9 +28,9 @@ if($badhash.Contains($filehash.Hash)){write-host "BAD HASH DETECTED ASSUME BREAC
 
 #there should be no events
 Write-verbose "Checking IIS-W3SVC-WP event logs"
-Get-EventLog -LogName Application -Source IIS-W3SVC-WP -InstanceId 2303
+Get-EventLog -LogName Application -Source IIS-W3SVC-WP -InstanceId 2303 -ea 0
 Write-verbose "Checking IIS-APPHOSTSVC event logs"
-Get-EventLog -LogName Application -Source IIS-APPHOSTSVC -InstanceId 9009
+Get-EventLog -LogName Application -Source IIS-APPHOSTSVC -InstanceId 9009 -ea 0
 
 #there should be no entries
 Write-verbose "Checking OABGenerator logs"
